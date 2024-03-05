@@ -4,72 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <!--Primary meta tags-->
-    <meta name="title" content="Weather App">
-    <meta name="description" content="weatherio is a weather app made by codewithsadee">
-
-    <!--fav icon-->
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
-
-    <!--google fonts link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-
     <!--custom css link-->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--custom js link-->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/route.js"></script>
 
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="assets/images/logo.png" width="364" height="58" alt="logo">
-            </a>
-
-            <div class="search-view" data-search-view>
-                <div class="search-wrapper">
-                    <input type="search" name="search" class="search-field searching" autocomplete="off" placeholder="Search city..." data-search-field>
-
-                    <span class="m-icon">search</span>
-                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
-                        <span class="m-icon">arrow_back</span>
-                    </button>
-    
-                </div>
-
-                <div class="search-result" data-search-result>
-                    <ul class="view-list" data-search-list>
-                        <li class="view-item">
-                            <span class="m-icon">location_on</span>
-    
-                            <div>
-                                <p class="item-title">London</p>
-                                <p class="label-2 item-subtitle">state of London, GB</p>
-                            </div>
-    
-                            <a href="#" class="item-link has-state" date-search-toggler></a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="header-left">
+            <img src="assets/icons/cloud.svg" alt="weather icon" class="weather-icon large" data-current-icon>
+            <div class="header-current-temp">
+                <span data-current-temp>31</span>&deg;
             </div>
-
-            <div class="header-actions">
-                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
-                    <span class="m-icon icon">search</span>
-                </button>
-
-                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
-                    <span class="m-icon">my_location</span>
-
-                    <span class="span">Current Location</span>
-                </a>
+        </div>
+        <div class="header-right">
+            <div class="info-group">
+                <div class="label">High</div>
+                <div><span data-current-high>32</span>&deg;</div>
+            </div>
+            <div class="info-group">
+                <div class="label">FL High</div>
+                <div><span data-current-fl-high>27</span>&deg;</div>
+            </div>
+            <div class="info-group">
+                <div class="label">Wind</div>
+                <div><span data-current-wind>9</span><span class="value-sub-info">mph</span></div>
+            </div>
+            <div class="info-group">
+                <div class="label">Low</div>
+                <div><span data-current-low>19</span>&deg;</div>
+            </div>
+            <div class="info-group">
+                <div class="label">FL Low</div>
+                <div><span data-current-fl-low>12</span>&deg;</div>
+            </div>
+            <div class="info-group">
+                <div class="label">Precip</div>
+                <div><span data-current-precip>0.1</span><span class="value-sub-info">in</span></div>
             </div>
         </div>
     </header>
+
+    <section class="day-section">
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+        <div class="day-card">
+            <img src="assets/icons/cloud-sun.svg" alt="" class="weather-icon">
+            <div class="day-card-day">Monday</div>
+            <div>32&deg;</div>
+        </div>
+    </section>
+
+    <table class="hour-section">
+        <tbody data-hour-section>
+            <tr class="hour-row">
+                <td>
+                    <div class="info-group">
+                        <div class="label">Thursday</div>
+                        <div>3 PM</div>
+                    </div>
+                </td>
+                <td>
+                    <img src="assets/icons/cloud.svg" alt="" class="weather-icon">
+                </td>
+                <td>
+                    <div class="info-group">
+                        <div class="label">Temp</div>
+                        <div>25&deg;</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-group">
+                        <div class="label">FL Temp</div>
+                        <div>21&deg;</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-group">
+                        <div class="label">Wind</div>
+                        <div>26<span class="value-sub-info">mph</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="info-group">
+                        <div class="label">Precip</div>
+                        <div>0<span class="value-sub-info">in</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <template></template>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
